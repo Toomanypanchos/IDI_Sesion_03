@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Introducción a la programación para el Diseño de interacción </title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header><h1>Dibuja un </h1></header>
+        <footer> 
+            <div id="back"><a href="index.html">back</a></div>
+            <div id="controles"><input type="color"><input type="range" min="1" max="5"></div>
+            <div id="print"><a href="#" id="aqui">descarga</a></div>
+        </footer>
+  
+        
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+        <script>
+            var que = new URLSearchParams(window.location.search).get("dibuja");
+            document.querySelector("h1").textContent += que;
+            document.querySelector("a").textContent += que;
+            function setup() {
+                var d = select("#descarga");
+                d.mousePressed(artemania);
+                createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
+                background(255);
+                elColor = createColorPicker("#777777").parent("controles");
+                elSlider = createSlider(1, 5, 3).parent("controles");
+            }
+            function draw() {
+                stroke(elColor.color());
+                strokeWeight(elSlider.value());
+                if (mouseIsPressed) {
+                    line(pmouseX, pmouseY, mouseX, mouseY);
+                }
+            }
+            function artemania() {
+                saveCanvas("mi_atacazo_artistico", "jpg");
+            }
+            function windowResized() {
+                resizeCanvas(windowWidth, windowHeight);
+            }
+        </script>
+        
+    <main>
+        <canvas id="defaultCanvas0" class="p5Canvas" width="1920" height="937" style="width: 1920px; height: 937px; position: absolute; left: 0px; top: 0px; z-index: -1;"></canvas>
+     </main>    
+        
+    </body>
+</html>
