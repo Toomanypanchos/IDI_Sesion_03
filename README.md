@@ -1,2 +1,2 @@
 # sesion_03
-jajejaja
+https://toomanypanchos.github.io/sesion_03/index.html
