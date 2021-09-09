@@ -21,8 +21,9 @@
     
 
         </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js">   </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
         <script>
+     
             function setup() {
                 var d = select("#aqui");
                 d.mousePressed(artemania);
@@ -37,6 +38,11 @@
                 if (mouseIsPressed) {
                     line(pmouseX, pmouseY, mouseX, mouseY);
                 }
+            }
+
+            function artemania() {
+                saveCanvas("mi_atacazo_artistico", "jpg");
+            }
         </script>
         <script>
             var alternativas = [" gnomo de cabeza", " oso bailando sau-sau", " delfin comunista", " macaco brasileño"];
