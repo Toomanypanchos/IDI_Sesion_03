@@ -9,15 +9,13 @@
         <link href="style.css" rel="stylesheet" />
     </head>
     <body>
-        <header><h1>Dibuja un </h1></header>
-        <footer> 
+        <header><h1>Dibuja </h1></header>
+        <footer>
             <div id="back"><a href="index.html">back</a></div>
-            <div id="controles"><input type="color"><input type="range" min="1" max="5"></div>
-            <div id="print"><a href="#" id="aqui">descarga</a></div>
+            <div id="controles"></div>
+            <a href="#" id="descarga">Descarga </a>
         </footer>
-  
-        
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
         <script>
             var que = new URLSearchParams(window.location.search).get("dibuja");
             document.querySelector("h1").textContent += que;
@@ -44,10 +42,5 @@
                 resizeCanvas(windowWidth, windowHeight);
             }
         </script>
-        
-    <main>
-        <canvas id="defaultCanvas0" class="p5Canvas" width="1920" height="937" style="width: 1920px; height: 937px; position: absolute; left: 0px; top: 0px; z-index: -1;"></canvas>
-     </main>    
-        
     </body>
 </html>
