@@ -29,9 +29,9 @@ a:hover {
 }
 
 header, main, footer {
-    width: 86vw;
+      width: 90vw;
     margin: 0;
-    padding: 5vh 7vw;
+    padding: 5vh 5vw;
 }
 
 header h1 {
@@ -43,9 +43,12 @@ main p{
 }
 
 footer {
-    position: absolute;
+       position: absolute;
     bottom: 0;
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer a {
