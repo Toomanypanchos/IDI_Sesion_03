@@ -10,20 +10,20 @@
     </head>
     <body>
         <header>
-            <h1>Nombre Apellido</h1>
+            <h1>Francisco Cabrera (Pancho)</h1>
         </header>
         <main>
-            <p>Preséntate en este párrafo, compartiendo la razón por la que tomas este Electivo. Intenta ser breve. Este párrafo tiene treinta palabras. Tú puedes agregar más, pero evita superar las cincuenta.</p>
+            <p>Me gusta que me digan Pancho porque francisco es muy largo, estudio diseño y luego de realizar un proyecto que involucraba coding interactivo y tener dificultades para llevarlo a cabo me parecio interesante tomar este electivo.</p>
         </main>     
         <footer>
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
         <script>
-            var alternativas = ["perro", "gato", "tigre", "elefante"];
+            var alternativas = ["gnomo de cabeza", "oso bailando sausau", "delfin comunista", "macaco brasileño"];
             function setup() {
                 var lugar = select("footer");
                 var alternativa = random(alternativas);
-                createA("page.html"+"?dibuja="+alternativa, "Dibuja un " + alternativa).parent(lugar);
+                createA("page.html"+"?dibuja="+alternativa, "Dibuja un" + alternativa).parent(lugar);
                 noCanvas();
             }
         </script>
