@@ -21,7 +21,23 @@
     
 
         </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js">   </script>
+        <script>
+            function setup() {
+                var d = select("#aqui");
+                d.mousePressed(artemania);
+                createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
+                background(240);
+                elColor = createColorPicker("#777777").parent("controles");
+                elSlider = createSlider(1, 5, 3).parent("controles");
+            }
+            function draw() {
+                stroke(elColor.color());
+                strokeWeight(elSlider.value());
+                if (mouseIsPressed) {
+                    line(pmouseX, pmouseY, mouseX, mouseY);
+                }
+        </script>
         <script>
             var alternativas = [" gnomo de cabeza", " oso bailando sau-sau", " delfin comunista", " macaco brasileño"];
             function setup() {
