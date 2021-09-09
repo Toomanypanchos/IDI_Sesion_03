@@ -17,10 +17,8 @@
         </footer>
   
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-       
-     
-       <script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+        <script>
             var que = new URLSearchParams(window.location.search).get("dibuja");
             document.querySelector("h1").textContent += que;
             document.querySelector("a").textContent += que;
@@ -39,13 +37,12 @@
                     line(pmouseX, pmouseY, mouseX, mouseY);
                 }
             }
-    function artemania() {
+            function artemania() {
                 saveCanvas("mi_atacazo_artistico", "jpg");
             }
             function windowResized() {
                 resizeCanvas(windowWidth, windowHeight);
             }
-
         </script>
         
     <main>
