@@ -18,16 +18,17 @@
   
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-        <script>
+       
+     
+       <script>
             var que = new URLSearchParams(window.location.search).get("dibuja");
             document.querySelector("h1").textContent += que;
             document.querySelector("a").textContent += que;
-          
             function setup() {
-                var d = select("#aqui");
+                var d = select("#descarga");
                 d.mousePressed(artemania);
                 createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
-                background(240);
+                background(255);
                 elColor = createColorPicker("#777777").parent("controles");
                 elSlider = createSlider(1, 5, 3).parent("controles");
             }
@@ -38,11 +39,18 @@
                     line(pmouseX, pmouseY, mouseX, mouseY);
                 }
             }
-
-            function artemania() {
+    function artemania() {
                 saveCanvas("mi_atacazo_artistico", "jpg");
             }
+            function windowResized() {
+                resizeCanvas(windowWidth, windowHeight);
             }
+
         </script>
+        
+    <main>
+        <canvas id="defaultCanvas0" class="p5Canvas" width="1920" height="937" style="width: 1920px; height: 937px; position: absolute; left: 0px; top: 0px; z-index: -1;"></canvas>
+     </main>    
+        
     </body>
 </html>
