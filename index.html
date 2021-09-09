@@ -10,10 +10,10 @@
     </head>
     <body>
         <header>
-            <h1>Daniel Salas</h1>
+            <h1>Francisco Cabrera (Pancho)</h1>
         </header>
         <main>
-            <p>Hola, soy un nerd y me quise meter a este electivo para estar preparado cuando las máquinas nos dominen.</p>
+            <p>Me gusta que me digan pancho porque Francisco es muy largo, tome este electivo porque no se que estoy hacinedo con mi vida.</p>
         </main>     
         <footer>
             <div></div>
@@ -21,11 +21,11 @@
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
         <script>
-            var alternativas = ["un perro gordo", "un gato enojado", "a Chupete Suazo con pelo", "conejo asesino"];
+            var alternativas = ["gnomo de cabeza", "oso bailando sausau", "delfin comunista", "macaco boxeador"];
             function setup() {
                 var lugar = select("footer");
                 var alternativa = random(alternativas);
-                createA("page.html"+"?dibuja="+alternativa, "Dibuja " + alternativa).parent(lugar);
+                createA("page.html"+"?dibuja="+alternativa, "Dibuja un " + alternativa).parent(lugar);
                 noCanvas();
             }
         </script>
