@@ -1,6 +1,6 @@
 
-# sesion_03
-https://toomanypanchos.github.io/sesion_03/index.html
+# Sesion_03
+https://toomanypanchos.github.io/IDI_Sesion_03/
 
 un mono boxeador.
 ![1](https://user-images.githubusercontent.com/89993556/132763056-69ea2f00-3936-426b-a1c1-38511e747c07.jpg)
